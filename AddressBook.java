@@ -2,7 +2,9 @@ package com.bl;
 
 public class AddressBook 
 {
-	
+	/*
+	 * Creating contact in AddressBook
+	 */
 
 		private String firstName;
 		private String lastName;
