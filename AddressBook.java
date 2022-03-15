@@ -9,14 +9,14 @@ public class AddressBook
 		private String address;
 		private String city;
 		private String state;
-		private String zip;
+		private int zip;
 		private String phoneNumber;
 		private String email;
 
 		/*
 		 * taking parameterized constructor to pass the values of contacts
 		 */
-		public AddressBook(String firstName, String lastName, String address, String city, String state, String zip,
+		public AddressBook(String firstName, String lastName, String address, String city, String state, int zipcode,
 				String phoneNumber, String email) 
 		{
 			super();
@@ -29,7 +29,7 @@ public class AddressBook
 			this.address = address;
 			this.city = city;
 			this.state = state;
-			this.zip = zip;
+			this.zip = zipcode;
 			this.phoneNumber = phoneNumber;
 			this.email = email;
 		}
@@ -78,11 +78,11 @@ public class AddressBook
 			this.state = state;
 		}
 
-		public String getZip() {
+		public int getZip() {
 			return zip;
 		}
 
-		public void setZip(String zip) {
+		public void setZip(int zip) {
 			this.zip = zip;
 		}
 
