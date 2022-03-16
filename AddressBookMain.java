@@ -11,10 +11,11 @@ public class AddressBookMain
 		System.out.println("Welcome to the address book system");
 		ArrayList<AddressBook> array = new ArrayList<AddressBook>();
 		try (Scanner sc = new Scanner(System.in)) {
-			try (Scanner sc1 = new Scanner(System.in)) {
+			try (Scanner sc1 = new Scanner(System.in)) 
+			{
 				int choice;
 				do {
-					System.out.println("1.INSERT" + "\n2.DISPLAY" + "\n3.EDIT" + "\n4.Delete");
+					System.out.println("1.INSERT" + "\n2.DISPLAY" + "\n3.EDIT" + "\n4.DELETE" + "\n5.INSERT NEW CONTACT");
 					System.out.println("Enter your 1st choice");
 					choice = sc.nextInt();
 
@@ -126,7 +127,27 @@ public class AddressBookMain
 						}
 						System.out.println("_____________________________________");
 						break;
-
+					case 5:
+						//TO  ADD Multiple contacts
+						System.out.print("Enter First Name: ");
+						String firstName2 = sc1.nextLine();
+						System.out.print("Enter last Name: ");
+						String lastName2 = sc1.nextLine();
+						System.out.print("Enter your address: ");
+						String address2 = sc1.nextLine();
+						System.out.print("Enter your city: ");
+						String city2 = sc1.nextLine();
+						System.out.print("Enter your state: ");
+						String state2 = sc1.nextLine();
+						System.out.print("Enter zip code : ");
+						int zipcode2 = sc.nextInt();
+						System.out.print("Enter phone number: ");
+						String phoneNo2 = sc1.nextLine();
+						System.out.print("Enter your email: ");
+						String email2 = sc1.nextLine();
+						AddressBook contact1 = new AddressBook(firstName2, lastName2, address2, city2, state2, zipcode2, phoneNo2,
+								email2);
+						array.add(contact1);
 					default:
 						System.out.println("default");
 
